@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- basic information of the extension -->
+<!-- more info: https://docs.joomla.org/Manifest_files/nl -->
+<extension
+    version="3.0" 
+    type="module"
+	client="site"
+	method="upgrade">
+
+    <name>mod_ipheiongraphs</name>
+
+    <!-- The following metadata elements are optional and free of formatting constraints -->
+    <author>Pierre Veelen</author>
+    <authorEmail>pierre@pvln.nl</authorEmail>
+    <authorUrl>http://www.pvln.nl/ipheiongraphs</authorUrl>
+    <creationDate>13 March 2020</creationDate>
+    <copyright>Copyright (C) 2020 by Pierre Veelen. All rights reserved.</copyright>
+    <license>GNU General Public License version 2</license>
+
+    <!--  The version string for this extension; is recorded in the #__extensions table -->
+    <version>0.0.1</version>
+
+    <!-- The description is optional and defaults to the name; translatable field -->
+    <description>MOD_IPHEIONGRAPHS_XML_DESCRIPTION</description>
+
+	<!-- the internal name of the component. If omitted, name will be cleaned and used -->
+	<element>ipheiongraphs</element>
+	
+    <!-- files and folders used by this module -->
+    <files>
+        <filename module="mod_ipheiongraphs">mod_ipheiongraphs.php</filename>
+        <filename>mod_ipheiongraphs.xml</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+
+    <!-- additional fields to be configured in joomla back-end for this module-->  
+    <config>
+    <fields name="params" >
+        <fieldset name="advanced" >
+            <field name="moduleclass_sfx"
+                type="text"
+                label="Module Class Suffix"
+                description="MOD_IPHEIONGRAPHS_CLASS_SUFFIX"
+            />
+            <field name="pretext" 
+                type="textarea"
+                label="Pre Text"
+                description="MOD_IPHEIONGRAPHS_PRETEXT"
+                cols="30"
+                rows="5"
+            />
+            <field name="posttext"
+                type="textarea"
+                label="Post Text"
+                description="MOD_IPHEIONGRAPHS_POSTTEXT"
+                cols="30"
+                rows="5"
+            />
+            <field name="listtype"
+                type="list"
+                default="0"
+                label="List Type"
+                description="MOD_IPHEIONGRAPHS_LISTTYPE">
+                    <option value="0">Show all</option>
+                    <option value="1">Show only non-Joomla!</option>
+            </field>
+        </fieldset>
+    </fields>
+    </config>
+
+    <!-- configuration for update servers-->
+    <updateservers>
+        <server
+            type="extension"
+            priority="1"
+            name="Updates for Ipheion Graphs module">
+            http://update.pvln.nl/joomla/modules/ipheiongraphs/mod_ipheiongraphs.xml
+        </server>
+
+    </updateservers>
+</extension>
