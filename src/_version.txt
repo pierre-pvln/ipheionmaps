@@ -16,8 +16,11 @@
 # 
 # Patch releases indicate that bugs have been fixed.
 # 
+# devversion only used during development. Should be left empty in final production versioning
+#
 # Changes should be commented in CHANGELOG.md
 #
 majorversion=0
 minorversion=0
 patchversion=1
+devversion=0
