@@ -18,7 +18,7 @@ defined('_JEXEC') or die;
  * 			Not used in this one yet (for future use).
  *
  */
-	$list = ModIpheionGrpahsHelper::getItems($params);
+	$list = ModIpheionGraphsHelper::getItems($params);
  	
 /**
  * Get layout values from back-end setting tab advanced in $params 
