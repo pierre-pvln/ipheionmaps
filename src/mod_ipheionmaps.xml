@@ -8,29 +8,29 @@
 	client="site"
 	method="upgrade">
 
-    <name>mod_ipheiongraphs</name>
+    <name>mod_ipheionmaps</name>
 
     <!-- The following metadata elements are optional and free of formatting constraints -->
     <author>Pierre Veelen</author>
     <authorEmail>pierre@pvln.nl</authorEmail>
-    <authorUrl>http://www.pvln.nl/ipheiongraphs</authorUrl>
+    <authorUrl>http://www.pvln.nl/ipheionmaps</authorUrl>
     <creationDate>24 March 2020</creationDate>
     <copyright>Copyright (C) 2020 by Pierre Veelen. All rights reserved.</copyright>
     <license>GNU General Public License version 2</license>
 
     <!--  The version string for this extension; is recorded in the #__extensions table -->
-    <version>0.0.0.6</version>
+    <version>0.0.1.0</version>
 
     <!-- The description is optional and defaults to the name; translatable field -->
-    <description>MOD_IPHEIONGRAPHS_XML_DESCRIPTION</description>
+    <description>MOD_IPHEIONMAPS_XML_DESCRIPTION</description>
 
 	<!-- the internal name of the component. If omitted, name will be cleaned and used -->
-	<element>ipheiongraphs</element>
+	<element>ipheionmaps</element>
 	
     <!-- files and folders used by this module -->
     <files>
-        <filename module="mod_ipheiongraphs">mod_ipheiongraphs.php</filename>
-        <filename>mod_ipheiongraphs.xml</filename>
+        <filename module="mod_ipheionmaps">mod_ipheionmaps.php</filename>
+        <filename>mod_ipheionmaps.xml</filename>
         <filename>helper.php</filename>
         <filename>index.html</filename>
         <folder>tmpl</folder>
@@ -44,41 +44,41 @@
             <field name="moduleclass_sfx"
                 type="text"
                 label="Module Class Suffix"
-                description="MOD_IPHEIONGRAPHS_CLASS_SUFFIX"
+                description="MOD_IPHEIONMAPS_CLASS_SUFFIX"
             />
             <field name="pretext" 
                 type="textarea"
                 label="Pre Text"
-                description="MOD_IPHEIONGRAPHS_PRETEXT"
+                description="MOD_IPHEIONMAPS_PRETEXT"
                 cols="30"
                 rows="5"
             />
             <field name="posttext"
                 type="textarea"
                 label="Post Text"
-                description="MOD_IPHEIONGRAPHS_POSTTEXT"
+                description="MOD_IPHEIONMAPS_POSTTEXT"
                 cols="30"
                 rows="5"
             />
             <field name="mapbox_accesstoken"
                 type="text"
                 label="Mapbox Accesstoken"
-                description="MOD_IPHEIONGRAPHS_MAPBOX_ACCESSTOKEN">
+                description="MOD_IPHEIONMAPS_MAPBOX_ACCESSTOKEN">
             </field>
             <field name="polygon_data_url"
                 type="text"
                 label="Polygon Data Url"
-                description="MOD_IPHEIONGRAPHS_POLYGON_DATA_URL">
+                description="MOD_IPHEIONMAPS_POLYGON_DATA_URL">
             </field>
             <field name="window_latitude"
                 type="text"
                 label="Window Latitude"
-                description="MOD_IPHEIONGRAPHS_WINDOW_LATITUDE">
+                description="MOD_IPHEIONMAPS_WINDOW_LATITUDE">
             </field>
             <field name="window_longitude"
                 type="text"
                 label="Window Longitude"
-                description="MOD_IPHEIONGRAPHS_WINDOW_LONGITUDE">
+                description="MOD_IPHEIONMAPS_WINDOW_LONGITUDE">
             </field>
         </fieldset>
     </fields>
@@ -90,7 +90,7 @@
             type="extension"
             priority="1"
             name="Updates for Ipheion Graphs module">
-            http://update.pvln.nl/joomla/modules/ipheiongraphs/mod_ipheiongraphs.xml
+            http://update.pvln.nl/joomla/modules/ipheionmaps/mod_ipheionmaps.xml
         </server>
 
     </updateservers>
