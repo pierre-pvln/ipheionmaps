@@ -1,3 +1,3 @@
 --- 
-# README file for the ipheiongraphs Joomla! extension
+# README file for the ipheionmaps Joomla! extension
 --- 

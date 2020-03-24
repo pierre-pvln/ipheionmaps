@@ -1,3 +1,3 @@
 --- 
-# Folder with additional documentation for ipheiongraphs extension
+# Folder with additional documentation for ipheionmaps extension
 --- 

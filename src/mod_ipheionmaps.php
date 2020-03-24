@@ -1,6 +1,6 @@
 <?php 
 /**
- * @package     mod_ipheiongraphs
+ * @package     mod_ipheionmaps
  * @author      Pierre Veelen, www.pvln.nl
  * @copyright   Copyright (C) 2020 Pierre Veelen. All rights reserved.
  * @license     GNU General Public License version 2 or later.
@@ -18,7 +18,7 @@ defined('_JEXEC') or die;
  * 			Not used in this one yet (for future use).
  *
  */
-	$list = ModIpheionGraphsHelper::getItems($params);
+	$list = ModIpheionMapsHelper::getItems($params);
  	
 /**
  * Get layout values from back-end setting tab advanced in $params 
@@ -34,6 +34,6 @@ defined('_JEXEC') or die;
  * Output depends if the layout has not been overridden or not. 
  * 
  */
-	require JModuleHelper::getLayoutpath('mod_ipheiongraphs', $layout);
+	require JModuleHelper::getLayoutpath('mod_ipheionmaps', $layout);
 	
 ?>

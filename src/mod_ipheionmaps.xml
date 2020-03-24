@@ -14,12 +14,12 @@
     <author>Pierre Veelen</author>
     <authorEmail>pierre@pvln.nl</authorEmail>
     <authorUrl>http://www.pvln.nl/ipheiongraphs</authorUrl>
-    <creationDate>13 March 2020</creationDate>
+    <creationDate>24 March 2020</creationDate>
     <copyright>Copyright (C) 2020 by Pierre Veelen. All rights reserved.</copyright>
     <license>GNU General Public License version 2</license>
 
     <!--  The version string for this extension; is recorded in the #__extensions table -->
-    <version>0.0.0.2</version>
+    <version>0.0.0.6</version>
 
     <!-- The description is optional and defaults to the name; translatable field -->
     <description>MOD_IPHEIONGRAPHS_XML_DESCRIPTION</description>
@@ -60,13 +60,25 @@
                 cols="30"
                 rows="5"
             />
-            <field name="listtype"
-                type="list"
-                default="0"
-                label="List Type"
-                description="MOD_IPHEIONGRAPHS_LISTTYPE">
-                    <option value="0">Show all</option>
-                    <option value="1">Show only non-Joomla!</option>
+            <field name="mapbox_accesstoken"
+                type="text"
+                label="Mapbox Accesstoken"
+                description="MOD_IPHEIONGRAPHS_MAPBOX_ACCESSTOKEN">
+            </field>
+            <field name="polygon_data_url"
+                type="text"
+                label="Polygon Data Url"
+                description="MOD_IPHEIONGRAPHS_POLYGON_DATA_URL">
+            </field>
+            <field name="window_latitude"
+                type="text"
+                label="Window Latitude"
+                description="MOD_IPHEIONGRAPHS_WINDOW_LATITUDE">
+            </field>
+            <field name="window_longitude"
+                type="text"
+                label="Window Longitude"
+                description="MOD_IPHEIONGRAPHS_WINDOW_LONGITUDE">
             </field>
         </fieldset>
     </fields>

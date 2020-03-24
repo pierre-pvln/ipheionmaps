@@ -9,7 +9,12 @@
  *
  */
 
-defined('_JEXEC') or die; ?>
+defined('_JEXEC') or die;
+
+$document = JFactory::getDocument();
+$document->addScript('https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js');
+$document->addStyleSheet('https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css');
+?>
 
 <!-- Get the module class suffix-->
 <div class="<?php echo $params->get("moduleclass_sfx");?>">
@@ -17,74 +22,36 @@ defined('_JEXEC') or die; ?>
 	<!-- Get the text to be displayed before the module-->
 	<div> <?php echo $params->get("pretext");?> </div>
 
-<!-- List the installed extensions -->	
-<?php
-	if (count($list)) 
-		{
-		if ($params->get("listtype") == "0" )
-            /* Show all extensions */
-			{
-			$showlisttype="<b>".JText::_('MOD_IPHEIONGRAPHS_ALL_EXTENTIONS')."</b></br>";
+	<div id='map-polygon' style='width: 100%; height: 600px;'></div>
 
-            $showtabledata="";
-			foreach ($list as $i => $item) :
-				{
-                /* manifest_cache is json decoded */ 
-				$decode = json_decode($item->manifest_cache);
-					
-				$showtabledata = $showtabledata
-				    ."<tr>"
-					    ."<td><b>".$item->name."</b></td>"
-						."<td>".$item->type."</td>"
-						."<td>".$decode->version."</td>"
-						."<td>".$decode->creationDate."</td>"
-						."<td>".$decode->authorUrl."</td>"
-					."</tr>";	
-				}		
-			endforeach;
-			}
-		elseif ($params->get("listtype") == "1" )
-			/* show only the non-joomla.org extensions */ 
-			{
-			$showlisttype="<b>".JText::_('MOD_IPHEIONGRAPHS_NON_JOOMLA_EXTENTIONS')."</b></br>";
+	<script>
+		mapboxgl.accessToken = <?php echo '"'.$params->get("mapbox_accesstoken").'"' ?>	
+	
+		var map;
+        map = new mapboxgl.Map({
+            container: "map-polygon",
+            style: "mapbox://styles/mapbox/streets-v11",
+            center: [<?php echo $params->get("window_longitude") ?>, <?php echo $params->get("window_latitude") ?>],
+            zoom: 14,
 
-            $showtabledata="";
-			foreach ($list as $i => $item) :
-			    {
-                /* manifest_cache is json decoded */ 
-				$decode = json_decode($item->manifest_cache);
-                
-                if ( $decode->authorUrl != "www.joomla.org" ) 				
-				   {		
-    				$showtabledata = $showtabledata
-	    			    ."<tr>"
-		    			    ."<td><b>".$item->name."</b></td>"
-			    			."<td>".$item->type."</td>"
-				    		."<td>".$decode->version."</td>"
-					    	."<td>".$decode->creationDate."</td>"
-						    ."<td>".$decode->authorUrl."</td>"
-					    ."</tr>";	
-				   }						
-				}		
-			endforeach;
-		    }	
-		/* list the table */
-        $showtablestart="<table>"
-        	                ."<tr>"
-						    ."<th>Extension Name</th>"
-						    ."<th>Type</th>"
-						    ."<th>Version</th>"
-						    ."<th>Creation Date</th>"
-						    ."<th>URL</th>"
-						."</tr>";
-		$showtableend="</table></br>";
-		echo $showlisttype.$showtablestart.$showtabledata.$showtableend;
-        }
-	else /* no extensions found */
-		{
-		echo JText::_('MOD_IPHEIONGRAPHS_NO_EXTENSIONS');
-		}	
-?>
+        }),
+		
+        map.on("load", function () {
+			map.addSource('polygon', {
+				type: 'geojson',
+				data: <?php echo "'".$params->get("polygon_data_url")."'" ?>
+			});
+			map.addLayer({
+				'id': 'polygon',
+				'type': 'fill',
+				'source': 'polygon',
+				'layout': {},
+				'paint': {'fill-color': '#088',  'fill-opacity': 0.8}
+				});
+        })
+	</script>
+	
 	<!-- Get the text to be displayed after the module-->	
 	<div><?php echo $params->get("posttext");?></div>
+
 </div>
