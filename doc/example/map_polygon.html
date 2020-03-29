@@ -1,0 +1,18 @@
+<html>
+    <head>
+		<title>Page with map and polygon</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div id='map-polygon' style='width: 50%; height: 600px;'></div>
+		<script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+		<link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet" />
+		<script>
+			mapboxgl.accessToken = "pk.eyJ1Ijoia3Jpc3RhcHNob3JucyIsImEiOiJjanZsZzRkOHUweXVyM3ptbGR0bzR5bjBsIn0.RSIul25ZPsMh7nvielEDfw"
+			polygon_data_url = "https://raw.githubusercontent.com/pierre-pvln/myPolygons/master/quays/NL-Born-quay-Barge.geojson"
+			window.latitude = 51.059
+			window.longitude = 5.813
+ 		</script> 
+		<script type="text/javascript" src="./js/map-polygon-container.js"></script>
+	</body>
+</html>
