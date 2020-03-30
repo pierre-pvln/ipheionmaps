@@ -1,7 +1,7 @@
 (function () {
 //    var map, pulsing_dot, ships_data_url, size;
 	  var map, pulsing_dot, size;
-//    mapboxgl.accessToken = "pk.eyJ1Ijoia3Jpc3RhcHNob3JucyIsImEiOiJjanZsZzRkOHUweXVyM3ptbGR0bzR5bjBsIn0.RSIul25ZPsMh7nvielEDfw",
+//    mapboxgl.accessToken = "<<YOUT_ACCESS_TOKEN>>",
         map = new mapboxgl.Map({
             container: "map-cnt",
             style: "mapbox://styles/mapbox/streets-v11",
