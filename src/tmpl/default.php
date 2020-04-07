@@ -23,33 +23,18 @@ $document->addStyleSheet('https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.c
 	<div> <?php echo $params->get("pretext");?> </div>
 
 	<div id='map-polygon' style='width: 100%; height: 600px;'></div>
-
-	<script>
-		mapboxgl.accessToken = <?php echo '"'.$params->get("mapbox_accesstoken").'"' ?>	
 	
-		var map;
-        map = new mapboxgl.Map({
-            container: "map-polygon",
-            style: "mapbox://styles/mapbox/streets-v11",
-            center: [<?php echo $params->get("window_longitude") ?>, <?php echo $params->get("window_latitude") ?>],
-            zoom: 14,
-
-        }),
+	    <!-- set required js vars -->
+	    <script>
+		mapboxgl.accessToken = <?php echo '"'.$params->get("mapbox_accesstoken").'"' ?>;
+		map_container_name = 'map-polygon';
+		map_center_longitude = <?php echo $params->get("window_longitude") ?>;
+		map_center_latitude = <?php echo $params->get("window_latitude") ?>;
+		polygon_data_url = <?php echo "'".$params->get("polygon_data_url")."'" ?>;
+		</script>
 		
-        map.on("load", function () {
-			map.addSource('polygon', {
-				type: 'geojson',
-				data: <?php echo "'".$params->get("polygon_data_url")."'" ?>
-			});
-			map.addLayer({
-				'id': 'polygon',
-				'type': 'fill',
-				'source': 'polygon',
-				'layout': {},
-				'paint': {'fill-color': '#088',  'fill-opacity': 0.8}
-				});
-        })
-	</script>
+		<!-- load the map -->
+		<script src="./media/mod_ipheionmaps/js/maps.js"></script>
 	
 	<!-- Get the text to be displayed after the module-->	
 	<div><?php echo $params->get("posttext");?></div>
