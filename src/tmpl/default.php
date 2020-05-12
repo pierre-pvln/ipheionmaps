@@ -31,6 +31,7 @@ $document->addStyleSheet('https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.c
 		map_center_longitude = <?php echo $params->get("window_longitude") ?>;
 		map_center_latitude = <?php echo $params->get("window_latitude") ?>;
 		polygon_data_url = <?php echo "'".$params->get("polygon_data_url")."'" ?>;
+		map_zoom_level = <?php echo $params->get("window_zoom") ?>;
 		</script>
 		
 		<!-- load the map -->

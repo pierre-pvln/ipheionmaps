@@ -1,6 +1,11 @@
 --- 
 #  Changelog for the ipheionmaps Joomla! code
 ---
+<h4>v.0.0.1.2 2020-05-12</h4>
+<ul>
+<li>Added initial zoom-level</li>
+</ul>
+
 <h4>v.0.0.1.1 2020-04-07</h4>
 <ul>
 <li>Moved inline js to /media/mod_ipheionmaps/js folder</li>

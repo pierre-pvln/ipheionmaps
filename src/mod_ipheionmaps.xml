@@ -19,7 +19,7 @@
     <license>GNU General Public License version 2</license>
 
     <!--  The version string for this extension; is recorded in the #__extensions table -->
-    <version>0.0.1.1</version>
+    <version>0.0.1.2</version>
 
     <!-- The description is optional and defaults to the name; translatable field -->
     <description>MOD_IPHEIONMAPS_XML_DESCRIPTION</description>
@@ -86,6 +86,12 @@
                 label="Window Longitude"
                 description="MOD_IPHEIONMAPS_WINDOW_LONGITUDE">
             </field>
+			<field name="window_zoom"
+                type="text"
+                label="Window Zoom"
+				default="16"
+                description="MOD_IPHEIONMAPS_WINDOW_ZOOM">
+            </field>
         </fieldset>
     </fields>
     </config>
@@ -95,7 +101,7 @@
         <server
             type="extension"
             priority="1"
-            name="Updates for Ipheion Graphs module">
+            name="Updates for Ipheion Maps Visualization module">
             http://update.pvln.nl/joomla/modules/ipheionmaps/mod_ipheionmaps.xml
         </server>
 

@@ -3,7 +3,7 @@ map = new mapboxgl.Map({
 	container: map_container_name,
 	style: "mapbox://styles/mapbox/streets-v11",
 	center: [map_center_longitude, map_center_latitude],
-	zoom: 14,
+	zoom: map_zoom_level,
 
 }),
 
