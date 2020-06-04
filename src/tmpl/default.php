@@ -22,12 +22,14 @@ $document->addStyleSheet('https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.c
 	<!-- Get the text to be displayed before the module-->
 	<div> <?php echo $params->get("pretext");?> </div>
 
-	<div id='map-polygon' style='width: 100%; height: 600px;'></div>
+	<!-- <div id='map-polygon' style='width: 100%; height: 600px;'></div> -->
+	<div id=<?php echo "'".$module->title."'" ?> style='width: 100%; height: 600px;'></div>
 	
 	    <!-- set required js vars -->
 	    <script>
 		mapboxgl.accessToken = <?php echo '"'.$params->get("mapbox_accesstoken").'"' ?>;
-		map_container_name = 'map-polygon';
+		/* map_container_name = 'map-polygon'; */
+		map_container_name = <?php echo "'".$module->title."'" ?>;
 		map_center_longitude = <?php echo $params->get("window_longitude") ?>;
 		map_center_latitude = <?php echo $params->get("window_latitude") ?>;
 		polygon_data_url = <?php echo "'".$params->get("polygon_data_url")."'" ?>;
