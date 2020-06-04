@@ -1,6 +1,17 @@
 --- 
 #  Changelog for the ipheionmaps Joomla! code
 ---
+<h4>v.0.0.1.4 2020-06-04</h4>
+<ul>
+<li>Replaced .js files with inline script generation through php</li>
+</ul>
+
+<h4>v.0.0.1.3 2020-06-03</h4>
+<ul>
+<li>Using div with module title</li>
+<li>Importing geojsons from site</li>
+</ul>
+
 <h4>v.0.0.1.2 2020-05-12</h4>
 <ul>
 <li>Added initial zoom-level</li>

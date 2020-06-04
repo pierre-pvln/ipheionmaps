@@ -9,6 +9,22 @@
         <element>mod_ipheionmaps</element>
 		<type>module</type>
 		<client>0</client>
+		<version>0.0.1.4</version>
+		<infourl title="Show geojson file on mapbox">http://www.pvln.nl/ipheionmaps</infourl>
+		<downloads>
+			<downloadurl type="upgrade" format="zip">http://download.pvln.nl/joomla/modules/ipheionmaps/mod_ipheionmaps_v0.0.1.4.zip</downloadurl>
+		</downloads>
+		<targetplatform name="joomla" version="3" />
+	</update>
+	
+	<update>
+		<name>mod_ipheionmaps</name>
+		<description>Module to show a mapbox map with a geojson polygon on the a Joomla! website</description>
+		<maintainer>Pierre Veelen</maintainer>
+		<maintainerurl>http://www.pvln.nl</maintainerurl>
+        <element>mod_ipheionmaps</element>
+		<type>module</type>
+		<client>0</client>
 		<version>0.0.1.3</version>
 		<infourl title="Show geojson file on mapbox">http://www.pvln.nl/ipheionmaps</infourl>
 		<downloads>

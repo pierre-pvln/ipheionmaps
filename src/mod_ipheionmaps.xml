@@ -19,7 +19,7 @@
     <license>GNU General Public License version 2</license>
 
     <!--  The version string for this extension; is recorded in the #__extensions table -->
-    <version>0.0.1.3</version>
+    <version>0.0.1.4</version>
 
     <!-- The description is optional and defaults to the name; translatable field -->
     <description>MOD_IPHEIONMAPS_XML_DESCRIPTION</description>
@@ -40,7 +40,7 @@
 	<!-- files and folders used by this module -->
 	<!-- in folder .\media are put in .\media\mod_ipheionmaps\ on the webserver-->
 	<media folder="media" destination="mod_ipheionmaps">
-		<folder>js</folder>
+	
 	</media>	
 	
     <!-- additional fields to be configured in joomla back-end for this module-->  
